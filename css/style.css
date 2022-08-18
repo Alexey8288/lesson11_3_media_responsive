@@ -17,31 +17,20 @@ h1 {
 }
 
 p {
-    font-size: 50px;
+    font-size: 35px;
 }
 
 /* 1400px; 992px; 768px; 576px;  */
+
+/* минимальный размер оптимизации до 325px - 375px */
 /* max-width всегда пишется от большего к меньшему */
 /* min-width всегда пишется от меньшего к большему */
 
+/* Desktop first & Mobile first */
 
-@media (max-width: 1400px) {
+@media (min-width: 992px) {
     body {
         background-color: green;
-    }
-
-    h1 {
-        font-size: 70px;
-    }
-
-    p {
-        font-size: 40px;
-    }
-}
-
-@media (max-width: 1400px) {
-    body {
-        background-color: yellow;
     }
 
     h1 {
@@ -49,11 +38,56 @@ p {
     }
 
     p {
-        font-size: 35px;
+        font-size: 30px;
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991.8px) and (min-width: 768px) {
+    body {
+        background-color: yellow;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 767.8px) {
+    body {
+        background-color: blue;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
+
+/* Desktop first */
+/* изначально большой сайт, потом при уменьшении меняется */
+
+/* @media (max-width: 1400px) {
+    body {
+        background-color: green;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    p {
+        font-size: 30px;
+    }
+} */
+
+/* @media (max-width: 992px) {
     body {
         background-color: orange;
     }
@@ -63,11 +97,11 @@ p {
     }
 
     p {
-        font-size: 30px;
+        font-size: 25px;
     }
-}
+} */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     body {
         background-color: blue;
     }
@@ -77,20 +111,37 @@ p {
     }
 
     p {
-        font-size: 25px;
+        font-size: 20px;
     }
-}
+} */
 
-@media (max-width: 576px) {
+/* или Mobile first  */
+/* изначально маленький сайт, потом при увеличении меняется */
+
+/* @media (min-width: 768px) {
     body {
-        background-color: violet;
+        background-color: blue;
     }
 
     h1 {
-        font-size: 30px;
+        font-size: 40px;
     }
 
     p {
-        font-size: 20px;
+        font-size: 30px;
     }
-}
+} */
+
+/* @media (min-width: 1400px) {
+    body {
+        background-color: green;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    p {
+        font-size: 40px;
+    }
+} */
